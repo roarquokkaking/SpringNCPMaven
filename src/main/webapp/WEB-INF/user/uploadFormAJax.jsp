@@ -47,8 +47,8 @@
 		<tr>
 			<td colspan="2" align="center">
 				<input type="button" value="이미지업로드" id="uploadAJaxBtn">
-				<input type="button" value="이미지수정" id="updateAJaxBtn">
-				<input type="button" value="이미지삭제" id="deleteAJaxBtn">
+				<!-- <input type="button" value="이미지수정" id="updateAJaxBtn">
+				<input type="button" value="이미지삭제" id="deleteAJaxBtn"> -->
 				<input type="reset" value="취소">
 			</td>
 		</tr>
