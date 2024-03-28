@@ -43,6 +43,24 @@ public class UserUploadDAOMyBatis implements UserUploadDAO {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public UserImageDTO getUploadImage(String seq) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getImageFileName(int seq) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void uploadDelete(List<String> list) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }
