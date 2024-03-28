@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- <mapper namespace="userSQL"> -->
+ <mapper namespace="user.dao.UserDAO">
+  	<!-- 아이디 중복체크 -->
+  	<select id="isExistId" parameterType="String" resultType="UserDTO">
+  		select * from usertable where id=#{id}
+  	</select>
+  	
+  	<!-- 등록 -->
+  	<insert id="write" parameterType="UserDTO">
+  		insert into usertable values(#{name},#{id},#{pwd})
+  	</insert>
+  	
+  	<select id="getUserList" parameterType="int" resultType="UserDTO">
+  		select * from usertable limit ${startNum-1},3
+  	</select>
+  	
+  	<!-- 총글수 -->
+  	<select id="getTotal" resultType="int" >
+  		select count(*) from usertable
+  	</select>
+  	
+  	<select id="getUser" parameterType="String" resultType="UserDTO">
+  		select * from usertable where id=#{id}
+  	</select>
+  	
+  	<update id="update" parameterType="UserDTO">
+  		update usertable set name=#{name},pwd=#{pwd} where id=#{id}
+  	</update>
+  	
+  	<delete id="delete" parameterType="String">
+  		delete from usertable where id=#{id} 
+  	</delete>
+  </mapper>
